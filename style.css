@@ -1,15 +1,31 @@
-// Smooth scrolling for any future navigation (if added)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
 
-// WhatsApp button functionality (already handled via href, but adding a click event for analytics if needed)
-document.getElementById('whatsapp-btn').addEventListener('click', function() {
-    // Optional: Track clicks or add custom behavior here
-    console.log('WhatsApp button clicked');
-});
+.product-item {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 320px;   /* Image bada kar diya */
+    object-fit: cover;
+}
+
+.product-item h3 {
+    padding: 15px;
+    font-size: 20px;   /* Text bhi bada */
+    font-weight: 600;
+}
